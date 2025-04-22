@@ -4,7 +4,7 @@ import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { addToPastes, updateToPastes } from "../redux/pasteSlice";
 import { FaRegCopy } from "react-icons/fa";
-import toast from "react-hot-toast";
+// import toast from "react-hot-toast";
 
 const Home = () => {
   const [title, setTitle] = useState("");
@@ -33,10 +33,10 @@ const Home = () => {
 
     if (pasteId) {
       dispatch(updateToPastes(paste));
-      toast.success("Updated Successfully");
+      // toast.success("Updated Successfully");
     } else {
       dispatch(addToPastes(paste));
-      toast.success("Created Successfully");
+      // toast.success("Created Successfully");
     }
 
     setTitle("");
