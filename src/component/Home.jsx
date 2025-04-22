@@ -88,7 +88,7 @@ const Home = () => {
 
           {/* Textarea */}
           <textarea
-            className="w-full p-5 bg-transparent outline-none resize-none min-h-[400px]"
+            className="w-full p-5 bg-transparent outline-none resize-none min-h-[400px] text-black"
             value={vale}
             placeholder="Write Your Content Here....."
             onChange={(e) => setValue(e.target.value)}
