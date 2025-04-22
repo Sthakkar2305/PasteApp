@@ -3,8 +3,8 @@ import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 import { useSearchParams } from "react-router-dom";
 import { addToPastes, updateToPastes } from "../redux/pasteSlice";
-import { FaRegCopy } from "react-icons/fa";
-// import toast from "react-hot-toast";
+// import { FaRegCopy } from "react-icons/fa";
+import toast from "react-hot-toast";
 
 const Home = () => {
   const [title, setTitle] = useState("");
@@ -33,10 +33,10 @@ const Home = () => {
 
     if (pasteId) {
       dispatch(updateToPastes(paste));
-      // toast.success("Updated Successfully");
+      toast.success("Updated Successfully");
     } else {
       dispatch(addToPastes(paste));
-      // toast.success("Created Successfully");
+      toast.success("Created Successfully");
     }
 
     setTitle("");
@@ -83,7 +83,7 @@ const Home = () => {
             className="absolute top-3 right-3 text-gray-600 hover:text-blue-600 transition"
             title="Copy"
           >
-            <FaRegCopy size={18} />
+            {/* <FaRegCopy size={18} /> */}
           </button>
 
           {/* Textarea */}
